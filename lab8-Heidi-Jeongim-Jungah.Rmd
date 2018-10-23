@@ -1,0 +1,89 @@
+---
+title             : "A Pilot Study: Week 5 Lab 8 Done by Three Git Newbie Ducks "
+shorttitle        : "w5lab8"
+
+author: 
+  - name          : "Heidi Shi"
+    affiliation   : "1"
+    corresponding : yes    # Define only one corresponding author
+    address       : "1248 University of Oregon Eugene, Oregon 97403-1248"
+    email         : "hshi@uoregon.com"
+  - name          : "Jeongim Jin"
+    affiliation   : "2"
+  - name          : "Jung-ah Lee"
+    affiliation   : "3"
+
+affiliation:
+  - id            : "1"
+    institution   : "University of Oregon"
+  - id            : "2"
+    institution   : "University of Oregon"
+  - id            : "3"
+    institution   : "University of Oregon"
+
+
+abstract: |
+ In recent years, Rstudio and Github have been widely regarded as one of the essential research tools for social science inquiries. Previous studies have revealed their significant methodological impact on disciplines such as psychology, linguistics, education and so forth (Shi &Jin, 2017; Lee 2018). This study is an attempt to solve all the questions listed in Week5 Lab8, one of the most challenging issues in the history of Fall 2018 EDLD 610. Through a collaborative approach to lab 8, this study aims to show that Rstudio and Github are learnable, and sufficient training is one of the most efficient methods in R language acquisition.
+  
+  <!-- https://tinyurl.com/ybremelq -->
+  
+keywords          : "Lab8"
+
+bibliography      : ["r-references.bib"]
+
+floatsintext      : no
+figurelist        : no
+tablelist         : no
+footnotelist      : no
+linenumbers       : no
+mask              : no
+draft             : no
+
+documentclass     : "apa6"
+classoption       : "man"
+output            : papaja::apa6_pdf
+---
+
+```{r setup, include = FALSE}
+library("papaja")
+```
+
+```{r analysis-preferences}
+# Seed for random number generation
+set.seed(42)
+knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
+```
+
+
+
+# Methods
+We report how we determined our sample size, all data exclusions (if any), all manipulations, and all measures in the study. <!-- 21-word solution (Simmons, Nelson & Simonsohn, 2012; retrieved from http://ssrn.com/abstract=2160588) -->
+
+## Participants
+
+## Material
+
+## Procedure
+
+## Data analysis
+We used `r cite_r("r-references.bib")` for all our analyses.
+
+
+# Results
+
+# Discussion
+
+
+\newpage
+
+# References
+```{r create_r-references}
+r_refs(file = "r-references.bib")
+```
+
+\begingroup
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{0.5in}
+
+<div id = "refs"></div>
+\endgroup
