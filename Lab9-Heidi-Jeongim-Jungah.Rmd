@@ -1,16 +1,16 @@
 ---
-title             : "A Pilot Study: Week 5 Lab 8 Done by Three Git Newbie Ducks "
+title             : "Lab9-Heidi-Jeongim-Jungah"
 shorttitle        : "w5lab8"
 
 author: 
-  - name          : "Heidi Shi"
+  - name          : "Jungah-Lee"
     affiliation   : "1"
     corresponding : yes    # Define only one corresponding author
     address       : "1248 University of Oregon Eugene, Oregon 97403-1248"
-    email         : "hshi@uoregon.com"
+    email         : "jlee27@uoregon.com"
   - name          : "Jeongim Jin"
     affiliation   : "2"
-  - name          : "Jung-ah Lee"
+  - name          : "Heidi Shi"
     affiliation   : "3"
 
 affiliation:
@@ -21,13 +21,30 @@ affiliation:
   - id            : "3"
     institution   : "University of Oregon"
 
+authornote: |
+  Add complete departmental affiliations for each author here. Each new line herein must be indented, like this line.
+
+  Enter author note here.
 
 abstract: |
- In recent years, Rstudio and Github have been widely regarded as one of the essential research tools for social science inquiries. Previous studies have revealed their significant methodological impact on disciplines such as psychology, linguistics, education and so forth (Shi &Jin, 2017; Lee 2018). This study is an attempt to solve all the questions listed in Week5 Lab8, one of the most challenging issues in the history of Fall 2018 EDLD 610. Through a collaborative approach to lab 8, this study aims to show that Rstudio and Github are learnable, and sufficient training is one of the most efficient methods in R language acquisition.
+  One or two sentences providing a **basic introduction** to the field,  comprehensible to a scientist in any discipline.
+  
+  Two to three sentences of **more detailed background**, comprehensible  to scientists in related disciplines.
+  
+  One sentence clearly stating the **general problem** being addressed by  this particular study.
+  
+  One sentence summarizing the main result (with the words "**here we show**" or their equivalent).
+  
+  Two or three sentences explaining what the **main result** reveals in direct comparison to what was thought to be the case previously, or how the  main result adds to previous knowledge.
+  
+  One or two sentences to put the results into a more **general context**.
+  
+  Two or three sentences to provide a **broader perspective**, readily comprehensible to a scientist in any discipline.
   
   <!-- https://tinyurl.com/ybremelq -->
   
-keywords          : "Lab8"
+keywords          : "keywords"
+wordcount         : "X"
 
 bibliography      : ["r-references.bib"]
 
@@ -35,7 +52,7 @@ floatsintext      : no
 figurelist        : no
 tablelist         : no
 footnotelist      : no
-linenumbers       : no
+linenumbers       : yes
 mask              : no
 draft             : no
 
@@ -45,29 +62,13 @@ output            : papaja::apa6_pdf
 ---
 
 ```{r setup, include = FALSE}
-knitr::opts_chunk$set(echo = FALSE, 
-                      message = FALSE,
-                      warning = FALSE,
-                      fig.width = 6.5,
-                      fig.height = 8)
-library(rio)
-library(here)
-library(tidyverse)
-library(janitor)
 library("papaja")
-
-theme_set(theme_minimal(base_size = 8))
 ```
 
 ```{r analysis-preferences}
 # Seed for random number generation
 set.seed(42)
 knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
-```
-
-
-```{r}
-
 ```
 
 
