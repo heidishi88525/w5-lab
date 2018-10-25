@@ -23,13 +23,14 @@ affiliation:
 
 
 abstract: |
- In recent years, Rstudio and Github have been widely regarded as one of the essential research tools for social science inquiries. Previous studies have revealed their significant methodological impact on disciplines such as psychology, linguistics, education and so forth (Shi &Jin, 2017; Lee 2018). This study is an attempt to solve all the questions listed in Week5 Lab8, one of the most challenging issues in the history of Fall 2018 EDLD 610. Through a collaborative approach to lab 8, this study aims to show that Rstudio and Github are learnable, and sufficient training is one of the most efficient methods in R language acquisition.
+ In recent years, Rstudio and Github have been widely regarded as one of the essential research tools for social science inquiries @srivastava2000web. Previous studies have revealed their significant methodological impact on disciplines such as psychology, linguistics, education and so forth (Shi &Jin, 2017; Lee 2018). This study is an attempt to solve all the questions listed in Week5 Lab8, one of the most challenging issues in the history of Fall 2018 EDLD 610 @morshedi1985optimal. Through a collaborative approach to lab 8, this study aims to show that Rstudio and Github are learnable, and sufficient training is one of the most efficient methods in R language acquisition @mobasher2000automatic.
+  
   
   <!-- https://tinyurl.com/ybremelq -->
   
 keywords          : "Lab8"
 
-bibliography      : ["r-references.bib"]
+bibliography      : ["reference1.bib"]
 
 floatsintext      : no
 figurelist        : no
@@ -66,11 +67,6 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 ```
 
 
-```{r}
-import(here)
-```
-
-
 
 # Methods
 We report how we determined our sample size, all data exclusions (if any), all manipulations, and all measures in the study. <!-- 21-word solution (Simmons, Nelson & Simonsohn, 2012; retrieved from http://ssrn.com/abstract=2160588) -->
@@ -90,7 +86,6 @@ We used `r cite_r("r-references.bib")` for all our analyses.
 library(rio)
 library(here)
 star <- import(here("Star", "star.csv"))
-View(star)
 ```
 
 ```{r table, results ="asis"}
@@ -104,6 +99,23 @@ star %>%
             sd=sd(treadss)) %>%
   knitr::kable(format= "latex")
 ```
+
+```{r commit 5, echo = FALSE}
+
+star %>% 
+  mutate(frl = factor(frl))
+
+theme_set(theme_minimal())
+ggplot(star, aes(totexp, tmathss))+
+  geom_point()+
+  geom_smooth(method = "lm", aes(color = frl))+
+  labs(x = "Teacher Experience(years)", y = "Total Math Scale Score")
+
+
+```
+
+
+
 # Discussion
 
 
