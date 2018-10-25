@@ -61,8 +61,7 @@ classoption       : "man, fleqn, noextraspace"
 output            : papaja::lab9_html: toc: true
                     toc_depth: 4
                     toc_float: true
-                    code_folding: "hide""
-output            : papaja::apa6_pdf
+                    code_folding: "hide"
 ---
 
 ```{r setup, include = FALSE}
