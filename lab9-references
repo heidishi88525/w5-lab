@@ -1,0 +1,24 @@
+@article{narayanan1997,
+  title={Toward articulatory-acoustic models for liquid approximants based on MRI and EPG data. Part I. The laterals},
+  author={Narayanan, Shrikanth S and Alwan, Abeer A and Haker, Katherine},
+  journal={The Journal of the Acoustical Society of America},
+  volume={101},
+  number={2},
+  pages={1064--1077},
+  year={1997},
+  publisher={ASA}
+}
+
+
+@phdthesis{ao1993,
+  title={Phonetics and phonology of Nantong Chinese},
+  author={Ao, Benjamin Xiaoping},
+  year={1993},
+  school={The Ohio State University}
+}
+
+@misc{boersma2009,
+  title={Praat: doing phonetics by computer (Version 5.1. 05)[Computer program]. Retrieved May 1, 2009},
+  author={Boersma, Paul and Weenink, David},
+  year={2009}
+}

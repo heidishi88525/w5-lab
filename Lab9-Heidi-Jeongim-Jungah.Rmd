@@ -22,31 +22,17 @@ affiliation:
     institution   : "University of Oregon"
 
 authornote: |
-  Add complete departmental affiliations for each author here. Each new line herein must be indented, like this line.
-
-  Enter author note here.
+ Jung-ah Lee joined the Department of East Asian Langauges and Literatures at the Unviersity of Oregon at 2017, and her research focus is in Korean phonetics. 
 
 abstract: |
-  One or two sentences providing a **basic introduction** to the field,  comprehensible to a scientist in any discipline.
-  
-  Two to three sentences of **more detailed background**, comprehensible  to scientists in related disciplines.
-  
-  One sentence clearly stating the **general problem** being addressed by  this particular study.
-  
-  One sentence summarizing the main result (with the words "**here we show**" or their equivalent).
-  
-  Two or three sentences explaining what the **main result** reveals in direct comparison to what was thought to be the case previously, or how the  main result adds to previous knowledge.
-  
-  One or two sentences to put the results into a more **general context**.
-  
-  Two or three sentences to provide a **broader perspective**, readily comprehensible to a scientist in any discipline.
+  The present study investigates the articulatory and acoustic properties of the unique apical segments in Mandarin Chinese that occur after dental and retroflex sibilants instead of the high front vowel [i]. An ultrasound study showed that the segments are homorganic with the preceding dental and retroflex sibilants. However, an acoustic study showed that they have a periodic waveform and clear formant structures with no inherent frication noise, indicating that they are not ‘voiced fricatives’. The results also suggest that the observed F2 pattern can only be explained with an acoustic model of a sonorant consonant, wherein F2 is attributed to the cavity behind the apical constriction. Based on this, it is argued that the segments can be best seen as ‘dental approximant [®̪]’ and ‘retroflex approximant [ɻ]’.A phonological implication of the pattern is also discussed: the co-occurrence restriction with the high front vowel eliminates a potential chance of palatalization of the dental and retroflex sibilants that may lead to neutralization of the place contrast. The tongue front gesture in the following approximants seems to provide an additional cue to the place of the preceding consonants; the low F3 of [ɻ], for example, enhances cues to the place of the preceding retroflex sibilant.
   
   <!-- https://tinyurl.com/ybremelq -->
   
 keywords          : "keywords"
 wordcount         : "X"
 
-bibliography      : ["r-references.bib"]
+bibliography      : ["lab9-references.bib"]
 
 floatsintext      : no
 figurelist        : no
@@ -74,21 +60,20 @@ set.seed(42)
 knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 ```
 
+# **Methods**
+We adopted the method introduced by @ao1993, the author of *Phonetics and phonology of Nantong Chinese*
 
-
-# Methods
-We report how we determined our sample size, all data exclusions (if any), all manipulations, and all measures in the study. <!-- 21-word solution (Simmons, Nelson & Simonsohn, 2012; retrieved from http://ssrn.com/abstract=2160588) -->
-
-## Participants
+## *Participants*
 The authors gathered teenagers who attend different schools in the U.S. 
-## Material
 
-## Procedure
+## *Material*
 
-## Data analysis
-We used `r cite_r("r-references.bib")` for all our analyses.
+## *Procedure*
 
-```{r echo = FALSE}
+## *Data analysis*
+We used @pan2011 for all our analyses.
+
+```{r Question3, echo = FALSE}
 library(here)
 library(rio)
 eclsk_samp <- import(here("data", "ecls-k_samp.sav"))
@@ -97,33 +82,38 @@ head(eclsk_samp)
 ```
 
 
+
+#Question4
 $$
 math_t2i = \alpha + \beta_1(math_t1i) + \beta_2(SES_cat1) + \beta_3(math_t1i x SES_cat1)\epsilon 
 $$
+  
 
-
-```{r echo = FALSE}
+```{r Question5, echo = FALSE}
 View(eclsk_samp)
+library(tidyverse)
 library(dplyr)
 library(ggplot2)
+
 eclsk_samp %>%
   characterize() %>%
-  ggplot(eclsk_samp, aes(x=T1MSCALE, y=T2MSCALE) + 
-           geom_point(color = "grey 70") + 
-           geom_smooth(method="lm", se=FALSE, aes(color = SES_cat))+
-           labs(x = "Math Score (time 1)", y = "Math Score (time 2)",
+  ggplot(eclsk_samp, aes(x=T1MSCALE, y=T2MSCALE)) + 
+        geom_point() + 
+        geom_smooth(method="lm", se=FALSE, aes(color = SES_cat))+
+        labs(x = "Math Score (time 1)", y = "Math Score (time 2)",
                 title = "Math scores", subtitle = "Relation from Time 1 to Time 2")
 ```
-# Results
+# **Results**
 Therefore, it is found that the math scores of su
-# Discussion
+
+# **Discussion**
 
 
 \newpage
 
-# References
+# **References**
 ```{r create_r-references}
-r_refs(file = "r-references.bib")
+r_refs(file = "lab9-references.bib")
 ```
 
 \begingroup
