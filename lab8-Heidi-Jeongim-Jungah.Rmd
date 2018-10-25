@@ -30,7 +30,7 @@ abstract: |
   
 keywords          : "Lab8"
 
-bibliography      : ["reference1.bib"]
+bibliography      : ["lab8-references.bib"]
 
 floatsintext      : no
 figurelist        : no
@@ -69,7 +69,7 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 
 
 # Methods
-We report how we determined our sample size, all data exclusions (if any), all manipulations, and all measures in the study. <!-- 21-word solution (Simmons, Nelson & Simonsohn, 2012; retrieved from http://ssrn.com/abstract=2160588) -->
+We used methods introduced by @pan2011. Besides we also adopted the diligent and collaborative approach to Rstudio (see @ahmed2001; @kadar2011).
 
 ## Participants
 Cute ducks who are intersted in Rstudio, Female, n=3.
@@ -81,7 +81,7 @@ Rstudio, an Octopus app called "GitKraken", Github.
 We compared pre and post-training skills of Rstudio and Github. 
 
 ## Data analysis
-We used `r cite_r("r-references.bib")` for all our analyses.
+We used @kadar2011 for all our analyses.
 
 
 # Results
@@ -127,7 +127,7 @@ ggplot(star, aes(totexp, tmathss))+
 
 # References
 ```{r create_r-references}
-r_refs(file = "r-references.bib")
+r_refs(file = "lab8-references.bib")
 ```
 
 \begingroup
