@@ -94,14 +94,13 @@ View(eclsk_samp)
 library(tidyverse)
 library(dplyr)
 library(ggplot2)
-
-eclsk_samp %>%
-  characterize() %>%
-  ggplot(eclsk_samp, aes(x=T1MSCALE, y=T2MSCALE)) + 
-        geom_point() + 
-        geom_smooth(method="lm", se=FALSE, aes(color = SES_cat))+
-        labs(x = "Math Score (time 1)", y = "Math Score (time 2)",
-                title = "Math scores", subtitle = "Relation from Time 1 to Time 2")
+ggplot(eclsk_samp, aes(x = T1MSCALE, y = T2MSCALE)) +
+  geom_point(color = "grey 70") +
+  geom_smooth(method = "lm", se = FALSE, aes(color = SES_cat)) +
+  labs(x = "Math Score (time 1)",
+       y = "Math Score (time 2)",
+       title = "Math scores",
+       subtitle = "Relation from Time 1 to Time 2")
 ```
 # **Results**
 Therefore, it is found that the math scores of su
