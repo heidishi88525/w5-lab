@@ -1,6 +1,6 @@
 ---
 title             : "Lab9-Heidi-Jeongim-Jungah"
-shorttitle        : "w5lab9"
+shorttitle        : "w5lab8"
 
 author: 
   - name          : "Jungah-Lee"
@@ -109,7 +109,7 @@ eclsk_samp %>%
                 title = "Math scores", subtitle = "Relation from Time 1 to Time 2")
 ```
 # Results
-
+Therefore, it is found that the math scores of su
 # Discussion
 
 
