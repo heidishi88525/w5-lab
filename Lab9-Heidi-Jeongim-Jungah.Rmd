@@ -96,6 +96,12 @@ View(eclsk_samp)
 head(eclsk_samp)
 ```
 
+
+$$
+math_t2i = \alpha + \beta_1(math_t1i) + \beta_2(SES_cat1) + \beta_3(math_t1i x SES_cat1)\epsilon 
+$$
+
+
 ```{r echo = FALSE}
 View(eclsk_samp)
 library(dplyr)
