@@ -57,7 +57,11 @@ mask              : no
 draft             : no
 
 documentclass     : "apa6"
-classoption       : "man"
+classoption       : "man, fleqn, noextraspace"
+output            : papaja::lab9_html: toc: true
+                    toc_depth: 4
+                    toc_float: true
+                    code_folding: "hide""
 output            : papaja::apa6_pdf
 ---
 
@@ -77,7 +81,7 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 We report how we determined our sample size, all data exclusions (if any), all manipulations, and all measures in the study. <!-- 21-word solution (Simmons, Nelson & Simonsohn, 2012; retrieved from http://ssrn.com/abstract=2160588) -->
 
 ## Participants
-
+The authors gathered teenagers who attend different schools in the U.S. 
 ## Material
 
 ## Procedure
@@ -85,7 +89,26 @@ We report how we determined our sample size, all data exclusions (if any), all m
 ## Data analysis
 We used `r cite_r("r-references.bib")` for all our analyses.
 
+```{r echo = FALSE}
+library(here)
+library(rio)
+eclsk_samp <- import(here("data", "ecls-k_samp.sav"))
+View(eclsk_samp)
+head(eclsk_samp)
+```
 
+```{r echo = FALSE}
+View(eclsk_samp)
+library(dplyr)
+library(ggplot2)
+eclsk_samp %>%
+  characterize() %>%
+  ggplot(eclsk_samp, aes(x=T1MSCALE, y=T2MSCALE) + 
+           geom_point(color = "grey 70") + 
+           geom_smooth(method="lm", se=FALSE, aes(color = SES_cat))+
+           labs(x = "Math Score (time 1)", y = "Math Score (time 2)",
+                title = "Math scores", subtitle = "Relation from Time 1 to Time 2")
+```
 # Results
 
 # Discussion
