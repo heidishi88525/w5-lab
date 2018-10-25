@@ -72,23 +72,27 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 We report how we determined our sample size, all data exclusions (if any), all manipulations, and all measures in the study. <!-- 21-word solution (Simmons, Nelson & Simonsohn, 2012; retrieved from http://ssrn.com/abstract=2160588) -->
 
 ## Participants
+Cute ducks who are intersted in Rstudio, Female, n=3.
 
 ## Material
+Rstudio, an Octopus app called "GitKraken", Github. 
 
 ## Procedure
+We compared pre and post-training skills of Rstudio and Github. 
 
 ## Data analysis
 We used `r cite_r("r-references.bib")` for all our analyses.
 
 
 # Results
-```{r echo=FALSE}
+
+```{r Commit 2 Q3, echo=FALSE}
 library(rio)
 library(here)
 star <- import(here("Star", "star.csv"))
 ```
 
-```{r table, results ="asis"}
+```{r Commit 4 table, results ="asis"}
 head(star)
 library(tidyverse)
 star %>%
@@ -100,7 +104,7 @@ star %>%
   knitr::kable(format= "latex")
 ```
 
-```{r commit 5, echo = FALSE}
+```{r Commit 5, echo = FALSE}
 
 star %>% 
   mutate(frl = factor(frl))
