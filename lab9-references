@@ -1,24 +1,27 @@
-@article{narayanan1997,
-  title={Toward articulatory-acoustic models for liquid approximants based on MRI and EPG data. Part I. The laterals},
-  author={Narayanan, Shrikanth S and Alwan, Abeer A and Haker, Katherine},
-  journal={The Journal of the Acoustical Society of America},
-  volume={101},
-  number={2},
-  pages={1064--1077},
-  year={1997},
-  publisher={ASA}
+@book{pan2011,
+  title={Politeness in historical and contemporary Chinese},
+  author={Pan, Yuling and K{\'a}d{\'a}r, D{\'a}niel Z},
+  year={2011},
+  publisher={A\&C Black}
 }
 
-
-@phdthesis{ao1993,
-  title={Phonetics and phonology of Nantong Chinese},
-  author={Ao, Benjamin Xiaoping},
-  year={1993},
-  school={The Ohio State University}
+@article{ahmed2001,
+  title={Petrological characteristics of podiform chromitites and associated peridotites of the Pan African Proterozoic ophiolite complexes of Egypt},
+  author={Ahmed, Ahmed Hassan and Arai, Shoji and Attia, Abdel Kadar},
+  journal={Mineralium Deposita},
+  volume={36},
+  number={1},
+  pages={72--84},
+  year={2001},
+  publisher={Springer}
 }
 
-@misc{boersma2009,
-  title={Praat: doing phonetics by computer (Version 5.1. 05)[Computer program]. Retrieved May 1, 2009},
-  author={Boersma, Paul and Weenink, David},
-  year={2009}
+@article{kadar2011,
+  title={Politeness in China},
+  author={K{\'a}d{\'a}r, D{\'a}niel Z and Pan, Yuling},
+  journal={Politeness in East Asia},
+  pages={125--146},
+  year={2011},
+  publisher={Cambridge University Press Cambridge}
 }
+

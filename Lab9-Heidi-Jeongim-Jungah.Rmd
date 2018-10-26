@@ -1,6 +1,6 @@
 ---
 title             : "Lab9-Heidi-Jeongim-Jungah"
-shorttitle        : "w5lab8"
+shorttitle        : "w5lab9"
 
 author: 
   - name          : "Jungah-Lee"
@@ -22,14 +22,15 @@ affiliation:
     institution   : "University of Oregon"
 
 authornote: |
- Jung-ah Lee joined the Department of East Asian Langauges and Literatures at the Unviersity of Oregon at 2017, and her research focus is in Korean phonetics. 
+  Jung-ah Lee joined the Department of East Asian Langauges and Literatures at the Unviersity of Oregon at 2017.
+
 
 abstract: |
-  The present study investigates the articulatory and acoustic properties of the unique apical segments in Mandarin Chinese that occur after dental and retroflex sibilants instead of the high front vowel [i]. An ultrasound study showed that the segments are homorganic with the preceding dental and retroflex sibilants. However, an acoustic study showed that they have a periodic waveform and clear formant structures with no inherent frication noise, indicating that they are not ‘voiced fricatives’. The results also suggest that the observed F2 pattern can only be explained with an acoustic model of a sonorant consonant, wherein F2 is attributed to the cavity behind the apical constriction. Based on this, it is argued that the segments can be best seen as ‘dental approximant [®̪]’ and ‘retroflex approximant [ɻ]’.A phonological implication of the pattern is also discussed: the co-occurrence restriction with the high front vowel eliminates a potential chance of palatalization of the dental and retroflex sibilants that may lead to neutralization of the place contrast. The tongue front gesture in the following approximants seems to provide an additional cue to the place of the preceding consonants; the low F3 of [ɻ], for example, enhances cues to the place of the preceding retroflex sibilant.
+ This article provides an introduction to this issue of Language in Society by  exploring the relationship of the concept of Community of Practice (CofP)  to related terms and theoretical frameworks. The criterial characteristics and  constitutive features of a CofP are examined; the article points out how a  CofP framework is distinguished from other sociolinguistic and social psy-  chological frameworks, including social identity theory, speech community,  social network and social constructionist approaches. (Community of Practice, speech community, gender, sex, social practice, ethnographic sociolinguistics, discourse analysis)
   
   <!-- https://tinyurl.com/ybremelq -->
   
-keywords          : "keywords"
+keywords          : "Community of Practice, Language Socialization"
 wordcount         : "X"
 
 bibliography      : ["lab9-references.bib"]
@@ -44,14 +45,27 @@ draft             : no
 
 documentclass     : "apa6"
 classoption       : "man, fleqn, noextraspace"
-output            : papaja::lab9_html: toc: true
-                    toc_depth: 4
-                    toc_float: true
-                    code_folding: "hide"
+output            : 
+                   papaja::apa6_pdf:
+                     toc: true
+                     toc_depth: 4
+                    
 ---
 
 ```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE, 
+                      message = FALSE,
+                      warning = FALSE,
+                      fig.width = 6.5,
+                      fig.height = 8)
+library(rio)
+library(here)
+library(tidyverse)
+library(janitor)
 library("papaja")
+
+theme_set(theme_minimal(base_size = 8))
+
 ```
 
 ```{r analysis-preferences}
@@ -60,11 +74,26 @@ set.seed(42)
 knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 ```
 
+
+\newpage
+
 # **Methods**
-We adopted the method introduced by @ao1993, the author of *Phonetics and phonology of Nantong Chinese*
+We adopted the method introduced by @pan2011, the author of *Phonetics and phonology of Nantong Chinese*We used methods introduced by @ahmed2001. Besides we also adopted the diligent and collaborative approach to Rstudio (see @kadar2011).
 
 ## *Participants*
-The authors gathered teenagers who attend different schools in the U.S. 
+The authors gathered teenagers who attend different schools on the Pacific Northwest, *Eugene,Oregon*.
+
+### Males###
+n=4
+
+### Females###
+n=4
+
+####Female Subjects from High School A####
+n=2
+
+####Female Subjects from High School B####
+n=2
 
 ## *Material*
 
@@ -74,23 +103,19 @@ The authors gathered teenagers who attend different schools in the U.S.
 We used @pan2011 for all our analyses.
 
 ```{r Question3, echo = FALSE}
-library(here)
 library(rio)
+library(here)
 eclsk_samp <- import(here("data", "ecls-k_samp.sav"))
-View(eclsk_samp)
-head(eclsk_samp)
 ```
 
 
-
-#Question4
 $$
 math_t2i = \alpha + \beta_1(math_t1i) + \beta_2(SES_cat1) + \beta_3(math_t1i x SES_cat1)\epsilon 
 $$
   
 
 ```{r Question5, echo = FALSE}
-View(eclsk_samp)
+
 library(tidyverse)
 library(dplyr)
 library(ggplot2)
@@ -101,7 +126,9 @@ ggplot(eclsk_samp, aes(x = T1MSCALE, y = T2MSCALE)) +
        y = "Math Score (time 2)",
        title = "Math scores",
        subtitle = "Relation from Time 1 to Time 2")
+
 ```
+
 # **Results**
 Therefore, it is found that the math scores of su
 

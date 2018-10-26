@@ -1,0 +1,7 @@
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\centering
+\includegraphics{Lab9-Heidi-Jeongim-Jungah_files/figure-latex/Question5-1.pdf}
+\caption{}
+\end{figure*}
